@@ -1,7 +1,8 @@
 require 'sinatra'
+require 'capybara/dsl'
+require 'selenium-webdriver'
 
 post '/named-cat' do
-  p params
   @age = params[:age]
   @name_color = params[:namecolor]|| "#49B0D0"
   @color = params[:color]
@@ -10,8 +11,6 @@ post '/named-cat' do
 end
 
 get '/form' do
-  p params
-  @name = params[:name]
   erb(:form)
 end
 
