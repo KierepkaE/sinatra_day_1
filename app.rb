@@ -17,7 +17,7 @@ end
 
 
 get '/random-cat' do
-  @cat_name = ['Miouw', 'Jerry', 'Tom'].sample
+  @cat_name = ['Moew', 'Jerry', 'Tom'].sample
   erb(:index)
 end
 
@@ -25,7 +25,7 @@ get '/named-cat' do
   p params
   @name_color = params[:namecolor]|| "#49B0D0"
   @color = params[:color] || "#86CB1E"
-  @cat_name = params[:name]
+  @cat_name = params[:name] || "Kitty Kat"
   erb(:index)
 end
 
