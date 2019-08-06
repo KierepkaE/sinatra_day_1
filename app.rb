@@ -23,6 +23,7 @@ end
 
 get '/named-cat' do
   p params
+  @age = params[:age] || 2
   @name_color = params[:namecolor]|| "#49B0D0"
   @color = params[:color] || "#86CB1E"
   @cat_name = params[:name] || "Kitty Kat"
